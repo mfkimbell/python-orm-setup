@@ -1,6 +1,9 @@
 # python-orm-setup
 
-uses Pyscopg2 and SQLAlchemy
+### Tools Used
+* `PDM` For python package management
+* `SQLAlchemy` For object relational mapping to database
+* `Postgres` For relational data storage
 
 ```
 project_root/
@@ -44,3 +47,12 @@ class Movie:
 
 ```
 We leave the creation logic to the repository `crud.movies` and we can keep business logic in this class (think LLD questions)
+
+## Running the program
+
+<img width="887" alt="Screenshot 2024-11-21 at 1 03 10 AM" src="https://github.com/user-attachments/assets/41e1e2cb-850c-456e-9be1-d84f1ab91edd">
+
+## Database end state
+<img width="497" alt="Screenshot 2024-11-21 at 1 00 19 AM" src="https://github.com/user-attachments/assets/e859f79f-3aa7-4a51-8107-76ff1169bc18">
+
+
