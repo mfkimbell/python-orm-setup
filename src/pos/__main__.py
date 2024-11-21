@@ -1,4 +1,5 @@
 from db import get_db
+from create_db import init_db
 from crud.movies import (
     create_movie,
     get_movies,
@@ -9,6 +10,7 @@ from crud.movies import (
 
 def main():
     # Get the database session generator
+    init_db()
     db_gen = get_db()
     db = next(db_gen)
 
@@ -30,7 +32,7 @@ def main():
         # Retrieve all movies
         movies = get_movies(db)
         print(
-            "All Movies:",
+            "\n  All Movies:",
             [
                 {
                     "id": movie.id,
@@ -78,18 +80,18 @@ def main():
         else:
             print("Failed to update: Movie not found.")
 
-        # Delete the movie
-        if updated_movie:
-            deleted_movie = delete_movie(db, movie_id=updated_movie.id)
-            if deleted_movie:
-                print(
-                    "Deleted Movie:",
-                    {"id": deleted_movie.id, "title": deleted_movie.title},
-                )
-            else:
-                print(f"Failed to delete movie with ID {updated_movie.id}.")
-        else:
-            print("Cannot delete: Updated movie is None.")
+        # # Delete the movie
+        # if updated_movie:
+        #     deleted_movie = delete_movie(db, movie_id=updated_movie.id)
+        #     if deleted_movie:
+        #         print(
+        #             "Deleted Movie:",
+        #             {"id": deleted_movie.id, "title": deleted_movie.title},
+        #         )
+        #     else:
+        #         print(f"Failed to delete movie with ID {updated_movie.id}.")
+        # else:
+        #     print("Cannot delete: Updated movie is None.")
     finally:
         db_gen.close()
 
