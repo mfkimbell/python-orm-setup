@@ -1,5 +1,8 @@
 # python-orm-setup
 
+### Overview
+A Python project demonstrating the use of modern ORM (Object Relational Mapping) techniques with SQLAlchemy to manage a relational database. The project leverages the repository pattern for clean and maintainable data access logic and includes a CRUD interface for managing movie data in a PostgreSQL database.
+
 ### Tools Used
 * `PDM` For python package management
 * `SQLAlchemy` For object relational mapping to database
@@ -17,7 +20,7 @@ project_root/
 ├── pyproject.toml      # PDM project file
 ```
 
-## repository pattern
+### repository pattern
 
 The repository pattern is a design approach to abstract data access logic and provide a clean interface for interacting with the underlying database. In your case, the crud.movies module acts as the repository.
 
@@ -48,11 +51,11 @@ class Movie:
 ```
 We leave the creation logic to the repository `crud.movies` and we can keep business logic in this class (think LLD questions)
 
-## Running the program
+### Running the program
 
 <img width="887" alt="Screenshot 2024-11-21 at 1 03 10 AM" src="https://github.com/user-attachments/assets/41e1e2cb-850c-456e-9be1-d84f1ab91edd">
 
-## Database end state
+### Database end state
 <img width="497" alt="Screenshot 2024-11-21 at 1 00 19 AM" src="https://github.com/user-attachments/assets/e859f79f-3aa7-4a51-8107-76ff1169bc18">
 
 
