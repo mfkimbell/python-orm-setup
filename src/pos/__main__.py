@@ -20,7 +20,7 @@ def main():
             db, title="The Godfather", director="Francis Ford Coppola", year=1972
         )
         print(
-            "Created Movie:",
+            "\nCreated Movie:",
             {
                 "id": new_movie.id,
                 "title": new_movie.title,
@@ -32,7 +32,7 @@ def main():
         # Retrieve all movies
         movies = get_movies(db)
         print(
-            "\n  All Movies:",
+            "\nAll Movies:",
             [
                 {
                     "id": movie.id,
@@ -48,7 +48,7 @@ def main():
         movie = get_movie_by_id(db, movie_id=new_movie.id)
         if movie:
             print(
-                "Retrieved Movie:",
+                "\nRetrieved Movie:",
                 {
                     "id": movie.id,
                     "title": movie.title,
@@ -69,7 +69,7 @@ def main():
         )
         if updated_movie:
             print(
-                "Updated Movie:",
+                "\nUpdated Movie:",
                 {
                     "id": updated_movie.id,
                     "title": updated_movie.title,
@@ -77,6 +77,7 @@ def main():
                     "year": updated_movie.year,
                 },
             )
+            print()
         else:
             print("Failed to update: Movie not found.")
 
@@ -92,6 +93,7 @@ def main():
         #         print(f"Failed to delete movie with ID {updated_movie.id}.")
         # else:
         #     print("Cannot delete: Updated movie is None.")
+        print()
     finally:
         db_gen.close()
 
