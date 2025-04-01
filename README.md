@@ -10,15 +10,19 @@ A Python project demonstrating the use of modern ORM (Object Relational Mapping)
 
 ```
 project_root/
+├── api/
+│   └── movies.py       # API endpoints for movie operations
+│   └── __init__.py     # To define the FastAPI app
 ├── crud/
-│   └── movies.py       # CRUD operations for the "movies" table
+│   └── movies.py       # Existing CRUD operations
 ├── models/
 │   └── __init__.py     # Base and engine setup
 │   └── movies.py       # Movies table definition
 ├── db.py               # Database session management
-├── main.py             # Entry point to demonstrate the functionality
+├── main.py             # Start FastAPI app here
 ├── pyproject.toml      # PDM project file
 ```
+
 
 ### repository pattern
 
